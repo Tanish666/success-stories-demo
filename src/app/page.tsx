@@ -426,7 +426,7 @@ interface CarouselProps {
   slides: SlideData[];
 }
  
-export function Carousel() {
+function Carousel() {
   const [current, setCurrent] = useState(0);
         const salary2 = [
       {
