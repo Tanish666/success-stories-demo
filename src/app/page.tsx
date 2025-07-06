@@ -565,7 +565,7 @@ function Carousel() {
 
 
 
-export function Carousel2() {
+function Carousel2() {
   const [current, setCurrent] = useState(0);
         const salary2 =[
       {
@@ -667,7 +667,7 @@ export function Carousel2() {
 }
 
 
-export function Carousel3() {
+function Carousel3() {
   const [current, setCurrent] = useState(0);
         const salary2 =[
       {
