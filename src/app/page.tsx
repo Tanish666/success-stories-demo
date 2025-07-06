@@ -13,12 +13,22 @@ import { BackgroundGradient } from '@/components/ui/background-gradient'
 import CommentReplyCard from '@/components/ui/comment-reply-card';
 import { Opacity } from '@tsparticles/engine';
 
+interface CarouselProps {
+  slides: SlideData[];
+}
+
 interface SlideData {
   title: string;
   button: string;
   src: string;
 }
  
+interface CarouselControlProps {
+  type: string;
+  title: string;
+  handleClick: () => void;
+}
+
 interface SlideProps {
   index: number;
   current: number;
@@ -398,11 +408,7 @@ const Slide = ({
   );
 };
  
-interface CarouselControlProps {
-  type: string;
-  title: string;
-  handleClick: () => void;
-}
+
  
 const CarouselControl = ({
   type,
@@ -422,9 +428,7 @@ const CarouselControl = ({
   );
 };
  
-interface CarouselProps {
-  slides: SlideData[];
-}
+
  
 function Carousel() {
   const [current, setCurrent] = useState(0);
