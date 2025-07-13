@@ -109,7 +109,7 @@ function Page() {
         src: "https://cdn.techkareer.com/success-stories/Marvel.jpeg",
         title: "Marvel John",
         category: "QA Engineer (Full-Time)",
-          bio: "3.0 YOE, Experienced with Web/iOS/Android testing. At last company, worked on 5+ AI based apps & 15+ hyper-casual games. Worked at Quiet Games (Game publisher), Gameberry Labs (Game Dev company), Indium Software (IT consulting firm), and more.",
+          bio: "3 YOE in Web, iOS & Android testing. Tested 5+ AI apps & 15+ hyper-casual games at Quiet Games, Gameberry Labs, Indium Software & others.",
         linkedin: "https://linkedin.com/in/marveljohn",
         salaryRange: "10-20 LPA",
         content: null,
@@ -150,7 +150,7 @@ function Page() {
   ];
 
   return (
-    <div  className='relative bg-[#000000] w-full text-white'>
+    <div  className='relative bg-[#1e1e1e] w-full text-white'>
       
        <div ref={heroRef} className='absolute top-0 w-full mt-5 px-16 flex justify-between'>
       <img src="/logo.webp" alt="logo" width={250} height={50}/>
@@ -177,20 +177,100 @@ function Page() {
           <TextReveal>LET'S SHED SOME LIGHT ON OTHER CAREERS. 💡</TextReveal>
         </motion.div>
 
-        <div className='relative h-[100vh] w-full'>
+
+
+
+        <div className={`${inter.className}  relative h-[100vh] w-full overflow-hidden pb-52`}>
+
+
+         <div className={`flex flex-col justify-center items-center absolute h-full w-1/3 z-30 bg-[#1e1e1e] ${inter.className}`}>
+         <div className='flex flex-col justify-center items-center'>
+          <h1 className='font-semibold text-[4rem] mb-5'>#Statisfaction</h1>
+          <p className='px-10 opacity-65'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus minus asperiores earum eum assumenda, fuga in repudiandae quae quos natus sint maiores, ipsa, vero dolore. Nisi delectus voluptas ratione fugiat.</p>
+         </div>
+         </div> 
+
+                   
+                    <motion.div viewport={{once:true}} transition={{duration:1}} initial={{y:0,x:350,opacity:0}} whileInView={{y:0,x:50,opacity:1}} className='absolute right-0 rounded-b-[4rem] h-32 w-96 bg-[#3A75F0]'></motion.div>
+
+         <motion.div viewport={{once:true}} initial={{opacity:0,filter:'blur(50px)',y:-15,x:20}} whileInView={{opacity:1,filter:'blur(0px)'}} 
+      transition={{duration:1,delay:1}} className='absolute right-0 top-0 p-12 font-semibold'>
+          <h1 className='text-5xl'>10 - 20 LPA</h1>
+          <h2 className='text-xl font-mono font-thin opacity-65'>6 Success Story</h2> 
+         </motion.div>
+        
+        <div className='p-52 flex justify-center items-center h-full w-full mt-32'>
+        <Carousel/>
+        </div>
+        </div>
+
+
+        <div className={`${inter.className} relative h-[100vh] w-full overflow-hidden pb-52`}>
+
+
+           <div className={`flex flex-col justify-center items-center right-0 absolute h-full w-1/3 z-30 bg-[#1e1e1e] ${inter.className}`}>
+         <div className='flex flex-col justify-center items-center'>
+          <h1 className='font-semibold text-[4rem] mb-5'>#Distinction</h1>
+          <p className='px-10 opacity-65'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus minus asperiores earum eum assumenda, fuga in repudiandae quae quos natus sint maiores, ipsa, vero dolore. Nisi delectus voluptas ratione fugiat.</p>
+         </div>
+         </div>
+
+                 <motion.div viewport={{once:true}} transition={{duration:1}} initial={{y:20,x:-350,opacity:0}} whileInView={{y:20,x:-50,opacity:1}}  className='absolute rounded-b-[4rem] h-32 w-96 bg-[#3A75F0]'></motion.div>
+
+         <motion.div viewport={{ once: true }} initial={{opacity:0,filter:'blur(50px)'}} whileInView={{opacity:1,filter:'blur(0px)'}} 
+      transition={{duration:1,delay:1}} className='absolute top-0 p-12 font-semibold'>
+          <h1 className='text-5xl'>5 - 10 LPA</h1>
+          <h2 className='text-xl font-mono font-thin opacity-65'>3 Success Story</h2> 
+         </motion.div>
+        
+        <div className='p-52 flex justify-center items-center h-full w-full mt-32'>
+        <Carousel2/>
+        </div>
+        </div>
+
+        <div className={`${inter.className} relative h-[100vh] w-full overflow-hidden pb-52`}>
+             
+         <div className={`flex flex-col justify-center items-center absolute h-full w-1/3 z-30 bg-[#1e1e1e] ${inter.className}`}>
+         <div className='flex flex-col justify-center items-center'>
+          <h1 className='font-semibold text-[4rem] mb-5'>#Brilliance</h1>
+          <p className='px-10 opacity-65'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus minus asperiores earum eum assumenda, fuga in repudiandae quae quos natus sint maiores, ipsa, vero dolore. Nisi delectus voluptas ratione fugiat.</p>
+         </div>
+         </div>
+                              <motion.div viewport={{once:true}} transition={{duration:1}} initial={{y:20,x:350,opacity:0}} whileInView={{y:20,x:50,opacity:1}} className='absolute right-0 rounded-b-[4rem] h-32 w-96 bg-[#3A75F0]'></motion.div>
+         <motion.div viewport={{ once: true }} initial={{opacity:0,filter:'blur(50px)'}} whileInView={{opacity:1,filter:'blur(0px)'}} 
+      transition={{duration:1,delay:1}} className='absolute right-0 top-0 p-12 font-semibold'>
+          <h1 className='text-5xl'>3-5 LPA</h1>
+          <h2 className='text-xl font-mono font-thin opacity-65'>3 Success Story</h2> 
+         </motion.div>
+
+        
+        <div className='p-52 flex justify-center items-center h-full w-full mt-32'>
+        <Carousel3/>
+        </div>
+        </div>
+        
+
+                <div className={`relative h-[100vh] ${inter.className} w-full `}>
+
+         <motion.div viewport={{once:true}} transition={{duration:1}} initial={{y:20,x:-350,opacity:0}} whileInView={{y:20,x:-50,opacity:1}} className='absolute rounded-b-[4rem] h-32 w-96 bg-[#3A75F0]'></motion.div>
+
          <motion.div initial={{opacity:0,filter:'blur(50px)'}} whileInView={{opacity:1,filter:'blur(0px)',}} viewport={{ once: true }}
-      transition={{duration:1}} className='absolute top-0 p-12'>
-          <h1 className='text-5xl font-mono'>20-40 LPA</h1>
-          <h2 className='text-xl font-mono'>1 Success Story</h2> 
+      transition={{duration:1,delay:1}} className={`absolute top-0 p-12 font-semibold  ${inter.className}`}>
+          <h1 className='text-5xl'>20 - 40 LPA</h1>
+          <h2 className='text-xl font-mono font-thin opacity-65'>1 Success Story</h2> 
          </motion.div>
         
         <div className='h-full w-full mt-20'>
         <div className='flex justify-center gap-16 pt-44 px-24'>
           <BackgroundGradient>
+             <FlipCard image={salary1.src} title={salary1.title} link={salary1.linkedin} salary={salary1.salaryRange} companyLogo={salary1.companyLogo} subtitle={salary1.companyName} description={salary1.category+" "+salary1.bio}/>
+            {/* <div className='flex flex-col gap-8 p-10 rounded-sm bg-[#EDEADE]'>
        <img src={salary1.src} 
-       className='object-cover w-[30vw] rounded-3xl' alt="" />
+       className='object-cover w-[65vw] rounded-sm shadow-2xl shadow-black/70' alt="" />
+                 <div className="text-xl font-bold text-black">{salary1.title}</div>
+       </div> */}
        </BackgroundGradient>
-        <span className='text-xl'>
+        {/* <span className='text-xl'>
 
             <h1 className='mb-8 pt-4 text-5xl'>{salary1.title}</h1>
           <div className='flex gap-3 mb-4 items-center'>
@@ -205,53 +285,18 @@ function Page() {
           <h1 className='bg-[#EDEADE] text-black p-1 rounded-sm mt-5 w-28 h-8 font-mono'>{salary1.salaryRange}</h1>
           </span>
           <motion.button onClick={() => window.location.href = salary1.linkedin} whileHover={{scale:1.1}} className='mt-3  p-1 text-sm font-mono bg-[#0077B5] rounded-sm'>Linkedin</motion.button>
-          </span>
+          </span> */}
+                   <div className='flex flex-col justify-center items-center'>
+          <h1 className='font-semibold text-[4rem] mb-5'>#Excellence</h1>
+          <p className='px-10 opacity-65'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus minus asperiores earum eum assumenda, fuga in repudiandae quae quos natus sint maiores, ipsa, vero dolore. Nisi delectus voluptas ratione fugiat.</p>
+         </div>
        </div>
         </div>
         </div>
 
-
-        <div className='relative h-[100vh] w-full overflow-hidden pb-52'>
-         <motion.div viewport={{ once: true }} initial={{opacity:0,filter:'blur(50px)'}} whileInView={{opacity:1,filter:'blur(0px)'}} 
-      transition={{duration:1}} className='absolute top-0 p-12'>
-          <h1 className='text-5xl font-mono'>10-20 LPA</h1>
-          <h2 className='text-xl font-mono'>6 Success Story</h2> 
-         </motion.div>
-        
-        <div className='p-52 flex justify-center items-center h-full w-full mt-20'>
-        <Carousel/>
-        </div>
-        </div>
-
-
-        <div className='relative h-[100vh] w-full overflow-hidden pb-52'>
-         <motion.div viewport={{ once: true }} initial={{opacity:0,filter:'blur(50px)'}} whileInView={{opacity:1,filter:'blur(0px)'}} 
-      transition={{duration:1}} className='absolute top-0 p-12'>
-          <h1 className='text-5xl font-mono'>5-10 LPA</h1>
-          <h2 className='text-xl font-mono'>3 Success Story</h2> 
-         </motion.div>
-        
-        <div className='p-52 flex justify-center items-center h-full w-full mt-20'>
-        <Carousel2/>
-        </div>
-        </div>
-
-        <div className='relative h-[100vh] w-full overflow-hidden pb-52'>
-         <motion.div viewport={{ once: true }} initial={{opacity:0,filter:'blur(50px)'}} whileInView={{opacity:1,filter:'blur(0px)'}} 
-      transition={{duration:1}} className='absolute top-0 p-12'>
-          <h1 className='text-5xl font-mono'>3-5 LPA</h1>
-          <h2 className='text-xl font-mono'>3 Success Story</h2> 
-         </motion.div>
-        
-        <div className='p-52 flex justify-center items-center h-full w-full mt-20'>
-        <Carousel3/>
-        </div>
-        </div>
-        
-
         <div className='flex flex-col'>
 
-                 <h1 className='text-5xl mt-16 text-center '>Why wait so long? Let's get this party started already!🚀</h1>
+                 <h1 className={`${inter.className} text-5xl mt-16 text-center font-semibold`}>Why wait so long? Let's get this party started already!🚀</h1>
         <motion.div viewport={{ once: true }} initial={{opacity:0,filter:'blur(50px)'}} whileInView={{opacity:1,filter:'blur(0px)'}} 
       transition={{duration:1}}  className='mt-20'>
         <CommentReplyCard
@@ -470,7 +515,7 @@ function Carousel() {
         src: "https://cdn.techkareer.com/success-stories/Marvel.jpeg",
         title: "Marvel John",
         category: "QA Engineer (Full-Time)",
-          bio: "3.0 YOE, Experienced with Web/iOS/Android testing. At last company, worked on 5+ AI based apps & 15+ hyper-casual games. Worked at Quiet Games (Game publisher), Gameberry Labs (Game Dev company), Indium Software (IT consulting firm), and more.",
+          bio: "3 YOE in Web, iOS & Android testing. Tested 5+ AI apps & 15+ hyper-casual games at Quiet Games, Gameberry Labs, Indium Software & others.",
         linkedin: "https://linkedin.com/in/marveljohn",
         salaryRange: "10-20 LPA",
         content: null,
@@ -566,7 +611,7 @@ function Carousel() {
 
 
 function Carousel2() {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(2);
         const salary2 =[
       {
         src: "https://cdn.techkareer.com/success-stories/akshat.jpeg",
@@ -594,7 +639,7 @@ function Carousel2() {
         src: "https://cdn.techkareer.com/success-stories/manu.jpeg",
         title: "Manu Goel",
         category: "Software Engineer (Full-Time)",
-          bio: "1.0 YOE, Launched his own Outlook extension to speed up reviewing emails and drafting new ones. Had good work experience, worked remotely for an AI startup where he built multiple products from scrach and mentored juniors.",
+          bio: "1 YOE. Built an Outlook extension for email productivity. Worked remotely at an AI startup, developed multiple products from scratch & mentored juniors.",
         linkedin: "https://www.linkedin.com/in/manu-goel-7899781a0",
         salaryRange: "5-10 LPA",
         content: null,
@@ -685,7 +730,7 @@ function Carousel3() {
         src: "https://cdn.techkareer.com/success-stories/prakher.jpeg",
         title: "Prakhar Shukla",
         category: "Software Engineer (Internship)",
-          bio: "1.0 YOE, Founder of Andronix (1.7M+ downloads, ranks #1), An app that lets you install linux distros on Android, and Lumoflo (beta) Centralised marketplace with separate domains for customers. All batteries included e-commerce store created for merchants.",
+          bio: "1 YOE. Founder of Andronix (1.7M+ downloads, #1 ranked Linux-on-Android app) & Lumoflo (beta) — a full-featured, domain-based e-commerce platform for merchants.",
         linkedin: "https://linkedin.com/in/iamprakharshukla",
         salaryRange: "3-5 LPA",
         content: null,

@@ -1,6 +1,7 @@
 'use client'
 import { cn } from "@/lib/utils";
 import {motion} from "framer-motion";
+import { Permanent_Marker } from 'next/font/google';
 import { BackgroundGradient } from "./background-gradient";
 interface FlipCardProps extends React.HTMLAttributes<HTMLDivElement> {
   image: string;
@@ -12,6 +13,11 @@ interface FlipCardProps extends React.HTMLAttributes<HTMLDivElement> {
   subtitle?: string;
   rotate?: "x" | "y";
 }
+
+const bangers = Permanent_Marker({
+  subsets: ['latin'],
+  weight: '400',
+});
 
 export default function FlipCard({
   image,
@@ -36,24 +42,24 @@ export default function FlipCard({
     <div className={cn("group h-[26rem] w-[20rem] [perspective:1000px]", className)} {...props}>
       <div
         className={cn(
-          "relative h-full rounded-2xl transition-all duration-500 [transform-style:preserve-3d]",
+          "relative h-full rounded-sm bg-[#EDEADE] transition-all duration-500 [transform-style:preserve-3d]",
           self[0],
         )}
       >
         {/* Front */}
-        <div className="absolute h-full w-full [backface-visibility:hidden]">
+        <div className="absolute p-5 [backface-visibility:hidden]">
           <img
             src={image}
             alt="image"
-            className="h-full w-full rounded-3xl object-cover shadow-2xl shadow-black/40"
+            className="h-full w-full rounded-sm  object-cover shadow-2xl shadow-black/70"
           />
-          <div className="absolute -bottom-12 left-4 text-xl font-bold text-white">{title}</div>
+          <div className={`${bangers.className} absolute -bottom-12 left-4 text-2xl text-black`}>{title}</div>
         </div>
 
         {/* Back */}
         <div
           className={cn(
-            "absolute h-full w-full rounded-3xl bg-black/80 p-4 text-slate-200 [backface-visibility:hidden]",
+            "absolute h-full w-full rounded-sm bg-black/80 p-4 text-slate-200 [backface-visibility:hidden]",
             self[1],
           )}
         >
