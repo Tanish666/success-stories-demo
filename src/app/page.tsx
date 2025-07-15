@@ -188,7 +188,7 @@ function Page() {
 
 
 
-        <div className={`${inter.className}  relative h-full md:h-[100vh] w-full overflow-hidden pb-20 md:pb-52`}>
+        <div className={`${inter.className}  relative h-[100vh] md:h-[100vh] w-full overflow-hidden pb-20 md:pb-52`}>
 
                      <motion.div viewport={{once:true}} transition={{duration:1}} initial={{y:0,x:100,opacity:0}} whileInView={{y:0,x:0,opacity:1}} className=' md:hidden absolute right-0 rounded-l-[4rem] h-24 w-44  bg-[#3A75F0]'></motion.div>
 
@@ -209,7 +209,7 @@ function Page() {
         </div>
 
 
-        <div className={`${inter.className} relative h-full md:h-[100vh] w-full overflow-hidden pb-20 md:pb-52`}>
+        <div className={`${inter.className} relative h-[100vh] md:h-[100vh] w-full overflow-hidden pb-20 md:pb-52`}>
 
                                  <motion.div viewport={{once:true}} transition={{duration:1}} initial={{y:0,x:-100,opacity:0}} whileInView={{y:0,x:0,opacity:1}} className=' md:hidden absolute left-0 rounded-r-[4rem] h-24 w-44  bg-[#3A75F0]'></motion.div>
            
@@ -229,7 +229,7 @@ function Page() {
         </div>
         </div>
 
-        <div className={`${inter.className} relative h-full md:h-[100vh] w-full overflow-hidden pb-20 md:pb-52`}>
+        <div className={`${inter.className} relative h-[100vh] md:h-[100vh] w-full overflow-hidden pb-20 md:pb-52`}>
              
 
                               <motion.div viewport={{once:true}} transition={{duration:1}} initial={{y:0,x:100,opacity:0}} whileInView={{y:0,x:0,opacity:1}} className=' md:hidden absolute right-0 rounded-l-[4rem] h-24 w-44  bg-[#3A75F0]'></motion.div>
@@ -250,7 +250,7 @@ function Page() {
         </div>
         
 
-                <div className={`relative  h-full md:h-[100vh] ${inter.className} w-full`}>
+                <div className={`relative  h-[100vh] md:h-[100vh] ${inter.className} w-full`}>
 
                                  <motion.div viewport={{once:true}} transition={{duration:1}} initial={{y:-30,x:-100,opacity:0}} whileInView={{y:-30,x:0,opacity:1}} className=' md:hidden absolute left-0 rounded-r-[4rem] h-24 w-44  bg-[#3A75F0]'></motion.div>
 
@@ -408,7 +408,7 @@ const Slide = ({
    
  
   return (
-    <div className="[perspective:1200px] [transform-style:preserve-3d]">
+    <div className="relative right-[0.5rem] sm:right-0 [perspective:1200px] [transform-style:preserve-3d]">
       <li
         ref={slideRef}
         className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[90vmin] h-[90vmin] md:w-[70vmin] md:h-[70vmin] z-10 "
@@ -552,11 +552,11 @@ function Carousel() {
  
   return (
     <div
-      className="relative w-[90vmin] h-[90vmin] md:w-[70vmin] md:h-[70vmin] mx-auto"
+      className="relative w-[90vmin] h-[90vmin] md:w-[70vmin] md:h-[70vmin] mx-auto -mt-36 sm:mt-0"
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
-        className="absolute flex transition-transform duration-1000 ease-in-out"
+        className="absolute flex transition-transform duration-1000 ease-in-out gap-8 sm:gap-0 justify-center items-center"
         style={{
           transform: `translateX(-${current * (100 / salary2.length)}%)`,
         }}
@@ -579,7 +579,7 @@ function Carousel() {
         ))}
       </ul>
  
-      <div className="absolute flex justify-center h-full mt-2 md:mt-0 w-full top-[calc(100%+1rem)]">
+      <div className="absolute flex justify-center h-full mt-14 sm:mt-2 md:mt-0 w-full top-[calc(100%+1rem)]">
         <CarouselControl
           type="previous"
           title="Go to previous slide"
@@ -656,11 +656,11 @@ function Carousel2() {
  
   return (
     <div
-      className="relative w-[90vmin] h-[90vmin] md:w-[70vmin] md:h-[70vmin] mx-auto"
+      className="relative w-[90vmin] h-[90vmin] md:w-[70vmin] md:h-[70vmin] mx-auto -mt-36 sm:mt-0"
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
-        className="absolute flex  transition-transform duration-1000 ease-in-out"
+        className="absolute flex  transition-transform duration-1000 ease-in-out gap-8 sm:gap-0 justify-center items-center"
         style={{
           transform: `translateX(-${current * (100 / salary2.length)}%)`,
         }}
@@ -683,7 +683,7 @@ function Carousel2() {
         ))}
       </ul>
  
-      <div className="absolute flex justify-center w-full mt-2 md:mt-0 top-[calc(100%+1rem)]">
+      <div className="absolute flex justify-center w-full mt-14 sm:mt-2 md:mt-0 top-[calc(100%+1rem)]">
         <CarouselControl
           type="previous"
           title="Go to previous slide"
@@ -782,11 +782,11 @@ function Carousel3() {
  
   return (
     <div
-      className="relative w-[90vmin] h-[90vmin] md:w-[70vmin] md:h-[70vmin] mx-auto"
+      className="relative w-[90vmin] h-[90vmin] md:w-[70vmin] md:h-[70vmin] mx-auto -mt-36 sm:mt-0"
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
-        className="absolute flex  transition-transform duration-1000 ease-in-out"
+        className="absolute flex  transition-transform duration-1000 ease-in-out gap-8 sm:gap-0"
         style={{
           transform: `translateX(-${current * (100 / salary2.length)}%)`,
         }}
@@ -809,7 +809,7 @@ function Carousel3() {
         ))}
       </ul>
  
-      <div className="absolute flex justify-center  mt-2 md:mt-0 w-full top-[calc(100%+1rem)]">
+      <div className="absolute flex justify-center  mt-14 sm:mt-2 md:mt-0 w-full top-[calc(100%+1rem)]">
         <CarouselControl
           type="previous"
           title="Go to previous slide"
