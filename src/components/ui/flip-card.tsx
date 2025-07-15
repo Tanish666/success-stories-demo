@@ -61,7 +61,7 @@ export default function FlipCard({
       <div
         onMouseEnter={handleHover}
         onMouseLeave={handleLeave}
-        className={cn("h-[32rem] lg:h-[30rem] w-[24rem] [perspective:1000px]", className)}
+        className={cn("h-[30rem] w-[20rem]  lg:h-[30rem] lg:w-[24rem] [perspective:1000px]", className)}
         {...props}
       >
         <div
@@ -101,7 +101,8 @@ export default function FlipCard({
                 alt=""
               />
               <div
-                className={`flex flex-col justify-center items-center text-2xl text-black`}
+                className={`flex flex-col justify-center items-center 
+                text-xl mt-4 md:mt-0  md:text-2xl text-black`}
               >
                 <h1 className={`${bangers.className}`}>{title}</h1>
                 <h4 className="text-sm">{bio}</h4>
