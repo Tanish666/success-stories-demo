@@ -135,7 +135,7 @@ function Page() {
 
   return (
     <div  className='relative overflow-x-hidden xl:overflow-x-visible  bg-[#1e1e1e] w-full text-white'>
-
+{/* 
      <motion.div ref={bannerRef} initial={{y:50}} animate={{y:0}} transition={{duration:1,delay:5}} className="fixed flex z-50 bottom-0 h-14 md:h-10 w-full bg-[#3A75F0]">
               <p className="w-full h-full flex justify-center items-center  text-white drop-shadow-md text-xs sm:text-sm md:text-base px-7 md:px-1 gap-1">
           Check out our professional Resume Reviewer service for just $1 and take the first step toward landing your dream job..{" "}
@@ -156,7 +156,7 @@ function Page() {
       <path d="M18 6l-12 12" />
       <path d="M6 6l12 12" />
     </svg></button>
-     </motion.div>
+     </motion.div> */}
 
 
        <div ref={heroRef} className='absolute top-0 w-full mt-5 px-4 md:px-8 lg:px-16 flex justify-between items-center'>
