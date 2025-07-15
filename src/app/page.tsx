@@ -271,7 +271,7 @@ function Page() {
        </span>
                    <div className='flex flex-col   gap-4 md:gap-8 overflow-hidden md:overflow-visible mb-32'>
                    <h1 className={`${inter.className} font-semibold text-2xl md:text-4xl xl:text-nowrap text-center`}>Almost  <motion.span initial={{opacity:0,filter:'blur(30px)'}} viewport={{once:true}} whileInView={{opacity:1,filter:'blur(0px)'}} transition={{duration:1}} className="bg-[#3A75F0] t px-1 py-1  font-semibold text-white">20+ Sucess Stories</motion.span> and counting more...🚀</h1>
-                   <div className='absolute sm:relative bottom-0 flex w-full overflow-visible justify-center items-center'> 
+                   <div className='absolute sm:relative bottom-0 flex w-full overflow-visible items-center'> 
                     <AnimatedTooltip items={people}  />
                     </div>
          </div>
