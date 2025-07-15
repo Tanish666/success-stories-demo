@@ -108,9 +108,9 @@ export default function FlipCard({
 
               </div>
             </div>
-                               <RippleButton
-                   rippleColor="#ADD8E6"
-              className=" text-white lg:hidden font-mono w-full -bottom-3 text-[1rem] "
+              <RippleButton
+              rippleColor="#ADD8E6"
+              className="z-0 text-white lg:hidden font-mono w-full -bottom-3 text-[1rem] "
               onClick={() => setIsFlipped(true)}
             >
               View

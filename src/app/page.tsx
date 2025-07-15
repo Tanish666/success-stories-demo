@@ -134,7 +134,7 @@ function Page() {
   ];
 
   return (
-    <div  className='relative  bg-[#1e1e1e] w-full text-white'>
+    <div  className='relative overflow-x-hidden xl:overflow-x-visible  bg-[#1e1e1e] w-full text-white'>
 
      <motion.div ref={bannerRef} initial={{y:50}} animate={{y:0}} transition={{duration:1,delay:5}} className="fixed flex z-50 bottom-0 h-14 md:h-10 w-full bg-[#3A75F0]">
               <p className="w-full h-full flex justify-center items-center  text-white drop-shadow-md text-xs sm:text-sm md:text-base px-7 md:px-1 gap-1">
@@ -209,7 +209,7 @@ function Page() {
         </div>
 
 
-        <div className={`${inter.className} relative h-[100vh] md:h-[100vh] w-full overflow-hidden pb-20 md:pb-52`}>
+        <div className={`${inter.className} relative h-[100vh]  md:h-[100vh] w-full overflow-hidden pb-20 md:pb-52`}>
 
                                  <motion.div viewport={{once:true}} transition={{duration:1}} initial={{y:0,x:-100,opacity:0}} whileInView={{y:0,x:0,opacity:1}} className=' md:hidden absolute left-0 rounded-r-[4rem] h-24 w-44  bg-[#3A75F0]'></motion.div>
            
@@ -250,7 +250,7 @@ function Page() {
         </div>
         
 
-                <div className={`relative  h-[100vh] md:h-[100vh] ${inter.className} w-full`}>
+                <div className={`relative  h-full md:h-[100vh] ${inter.className} w-full`}>
 
                                  <motion.div viewport={{once:true}} transition={{duration:1}} initial={{y:-30,x:-100,opacity:0}} whileInView={{y:-30,x:0,opacity:1}} className=' md:hidden absolute left-0 rounded-r-[4rem] h-24 w-44  bg-[#3A75F0]'></motion.div>
 
@@ -264,22 +264,22 @@ function Page() {
         
         <div className='h-full w-full mt-8 md:mt-20 flex justify-center items-center overflow-x-hidden'>
         <div className='flex flex-col lg:flex-row justify-center items-center gap-8 md:gap-16 pt-20 md:pt-44 px-2 md:px-24 w-full'>
-          <span className='w-full mb-9 xl:mb-0 mt-3 md:mt-0 max-w-[95vw] md:max-w-none flex justify-center items-center'>
+          <span className='w-full mb-9 xl:mb-0 mt-32 md:mt-0 max-w-[95vw] md:max-w-none flex justify-center items-center'>
           <BackgroundGradient>
              <FlipCard bio={salary1.category} image={salary1.src} title={salary1.title} link={salary1.linkedin} salary={salary1.salaryRange} companyLogo={salary1.companyLogo} subtitle={salary1.companyName} description={salary1.category+" "+salary1.bio}/>
            </BackgroundGradient>
        </span>
-                   <div className='flex flex-col justify-center items-center  gap-4 md:gap-8 overflow-hidden md:overflow-visible'>
+                   <div className='flex flex-col   gap-4 md:gap-8 overflow-hidden md:overflow-visible mb-32'>
                    <h1 className={`${inter.className} font-semibold text-2xl md:text-4xl xl:text-nowrap text-center`}>Almost  <motion.span initial={{opacity:0,filter:'blur(30px)'}} viewport={{once:true}} whileInView={{opacity:1,filter:'blur(0px)'}} transition={{duration:1}} className="bg-[#3A75F0] t px-1 py-1  font-semibold text-white">20+ Sucess Stories</motion.span> and counting more...🚀</h1>
-                   <span className='flex'> 
+                   <div className='absolute sm:relative bottom-0 flex w-full overflow-visible justify-center items-center'> 
                     <AnimatedTooltip items={people}  />
-                    </span>
+                    </div>
          </div>
        </div>
         </div>
         </div>
 
-        <div className='flex flex-col'>
+        <div className='flex flex-col mt-8 md:mt-0'>
 
                  <h1 className={`${inter.className} text-2xl md:text-5xl mt-16 md:mt-16 text-center font-semibold px-2`}>Why wait so long? Let's get this party started already!🚀</h1>
         <motion.div viewport={{ once: true }} initial={{opacity:0,filter:'blur(50px)'}} whileInView={{opacity:1,filter:'blur(0px)'}} 
@@ -579,7 +579,7 @@ function Carousel() {
         ))}
       </ul>
  
-      <div className="absolute flex justify-center h-full mt-14 sm:mt-2 md:mt-0 w-full top-[calc(100%+1rem)]">
+      <div className="absolute flex justify-center h-full mt-14 sm:mt-0 md:mt-0 w-full top-[calc(100%+1rem)]">
         <CarouselControl
           type="previous"
           title="Go to previous slide"
