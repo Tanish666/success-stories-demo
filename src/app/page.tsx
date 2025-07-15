@@ -136,14 +136,14 @@ function Page() {
   return (
     <div  className='relative  bg-[#1e1e1e] w-full text-white'>
 
-     <motion.div ref={bannerRef} initial={{y:50}} animate={{y:0}} transition={{duration:1,delay:5}} className="fixed flex z-50 bottom-0 h-10 w-full bg-[#3A75F0]">
-              <p className="w-full h-full flex justify-center items-center text-white drop-shadow-md text-xs sm:text-sm md:text-base px-7 md:px-1">
+     <motion.div ref={bannerRef} initial={{y:50}} animate={{y:0}} transition={{duration:1,delay:5}} className="fixed flex z-50 bottom-0 h-14 md:h-10 w-full bg-[#3A75F0]">
+              <p className="w-full h-full flex justify-center items-center  text-white drop-shadow-md text-xs sm:text-sm md:text-base px-7 md:px-1 gap-1">
           Check out our professional Resume Reviewer service for just $1 and take the first step toward landing your dream job..{" "}
-          <a href="#" className="transition duration-200 hover:underline ml-1">
+          <a href="#" className="transition duration-200 hover:underline  text-center mr-2 md:mr-0">
             Read more
           </a>
         </p>
-        <button onClick={handleBanner} className='absolute flex h-full justify-center items-center right-2 sm:right-5 text-white'>    <svg
+        <button onClick={handleBanner} className='absolute flex h-full justify-center items-center right-2  sm:right-5 text-white'>    <svg
       xmlns="http://www.w3.org/2000/svg"
       width="20" height="20" viewBox="0 0 24 24"
       fill="none"
@@ -174,7 +174,7 @@ function Page() {
       <motion.span initial={{opacity:0,filter:'blur(50px)'}} animate={{opacity:1,filter:'blur(0px)'}} 
       transition={{delay:1,duration:1.5}}
       className='relative flex flex-col justify-center items-center w-full text-[	#EDEADE] mt-32 md:mt-[18rem] px-2'>
-      <MorphingText className='text-nowrap text-lg md:text-2xl' texts={words}/>
+      <MorphingText className='text-nowrap text-3xl md:text-2xl' texts={words}/>
           <h1 className='opacity-65 text-base md:text-2xl font-mono text-center'>Connecting exceptional talent with innovative companies</h1>
        </motion.span>
         
